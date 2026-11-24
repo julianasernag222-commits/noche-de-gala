@@ -1,0 +1,62 @@
+:root {
+  color-scheme: light;
+  --wine: #650d0c;
+  --cream: #fff6cf;
+  --gold: #e7c879;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: var(--cream); }
+body { min-height: 100svh; display: grid; place-items: start center; }
+.experience { width: min(100%, 700px); min-height: 100svh; overflow: hidden; position: relative; }
+.cover, .invite { width: 100%; position: relative; animation: appear .55s ease both; }
+.artwork { display: block; width: 100%; height: auto; }
+.envelope-hit {
+  position: absolute;
+  left: 25.5%; top: 47.4%; width: 53.5%; height: 24%;
+  border: 0; padding: 0; background: transparent; cursor: pointer;
+  perspective: 900px; -webkit-tap-highlight-color: transparent;
+}
+.envelope-hit:focus-visible { outline: 3px solid #8b5a19; outline-offset: 5px; border-radius: 8px; }
+.flap {
+  position: absolute; inset: 0 0 auto; height: 60%;
+  background: linear-gradient(145deg, #8a1824, #650d19 70%, #4e0912);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: 50% 0; transition: transform .65s ease, opacity .35s ease;
+  filter: drop-shadow(0 2px 2px #3b0909);
+}
+.letter {
+  position: absolute; left: 8%; right: 8%; bottom: 7%; height: 48%;
+  background: linear-gradient(#fff8d9, #f1dfaa); border: 1px solid #d8b96d;
+  border-radius: 3px; opacity: 0; transform: translateY(20%);
+  transition: transform .65s ease, opacity .4s ease;
+}
+.envelope-hit.opening .flap { transform: rotateX(180deg); opacity: .2; }
+.envelope-hit.opening .letter { opacity: 1; transform: translateY(-35%); }
+.cover.leaving { animation: leave .55s ease forwards; }
+.invite { background: var(--wine); }
+.invite-art-wrap { position: relative; width: 100%; }
+.guest-name {
+  position: absolute; left: 50%; top: 18.55%; transform: translate(-50%, -50%);
+  width: 62%; margin: 0; color: #fff0c2; text-align: center;
+  font-family: "Brush Script MT", "Segoe Script", "URW Chancery L", cursive;
+  font-size: clamp(22px, 5.1vw, 42px); line-height: 1.05; font-style: italic;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  text-shadow: 0 1px 1px rgba(70, 22, 4, .5); pointer-events: none;
+}
+.back-button {
+  display: block; margin: 14px auto 24px; border: 1px solid #d6b86d;
+  border-radius: 999px; padding: 10px 18px; color: #fff2c8;
+  background: #5b0c0b; font: 14px/1.2 system-ui, sans-serif; cursor: pointer;
+}
+.back-button:focus-visible { outline: 3px solid #fff2c8; outline-offset: 3px; }
+[hidden] { display: none !important; }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes leave { to { opacity: 0; transform: scale(.98); } }
+@media (min-width: 701px) {
+  body { padding: 22px 0; background: #eee8d6; }
+  .experience { min-height: 0; box-shadow: 0 12px 50px rgba(42, 20, 10, .18); }
+  .guest-name { font-size: clamp(28px, 3.8vw, 42px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

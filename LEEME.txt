@@ -1,0 +1,31 @@
+NOCHE DE GALA - INVITACIÓN WEB PERSONALIZABLE
+
+ARCHIVOS
+- index.html: estructura de la página.
+- styles.css: estilos y adaptación a celular/computador.
+- script.js: animación y personalización del nombre.
+- assets/portada.png: portada original exportada del PDF sin nombre.
+- assets/invitacion.png: invitación original exportada del PDF sin nombre.
+
+PROBAR EN TU COMPUTADOR
+1. Descomprime la carpeta.
+2. Abre index.html en Chrome, Edge o Firefox.
+3. Para probar un nombre, agrega al final de la dirección:
+   ?nombre=Juliana%20Serna
+   Ejemplo: index.html?nombre=Juliana%20Serna
+
+PERSONALIZAR LOS ENLACES
+Cuando publiques la carpeta en un servicio de alojamiento estático, usa la misma dirección y cambia solo el parámetro nombre:
+https://TU-DOMINIO/?nombre=Juliana%20Serna
+https://TU-DOMINIO/?nombre=Daniel
+https://TU-DOMINIO/?nombre=Sofia
+
+El texto del nombre se inserta en la página mediante JavaScript; no hay que editar las imágenes para cada invitado.
+
+PUBLICACIÓN
+Sube la carpeta completa (index.html, styles.css, script.js y assets/) a Netlify Drop o a otro hosting estático. No subas únicamente el HTML: necesita los dos PNG de assets.
+
+NOTAS
+- Esta versión conserva las páginas visuales del PDF original y añade el nombre sobre el marco dorado.
+- La portada tiene una zona clicable sobre el sobre y una transición de apertura.
+- La versión actual no incluye contraseña ni confirmación de asistencia.
