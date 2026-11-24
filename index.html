@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -5,27 +6,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fff6cf">
   <meta name="description" content="Tu invitación personalizada a la Noche de Gala.">
-  <title>tenemos una invitación para ti | Noche de Gala</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <title>Tenemos una invitación para ti | Noche de Gala</title>
+
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+
   <main class="experience" aria-live="polite">
+
     <section class="cover" id="cover" aria-label="Portada de la invitación">
-      <img class="artwork" src="assets/portada.png" alt="Tenemos una invitación para ti. Haz clic en el sobre.">
-      <button class="envelope-hit" id="openInvite" type="button" aria-label="Abrir el sobre y ver la invitación">
+
+      <img class="artwork"
+           src="portada.png"
+           alt="Tenemos una invitación para ti. Haz clic en el sobre.">
+
+      <button class="envelope-hit" id="openInvite"
+              type="button"
+              aria-label="Abrir el sobre y ver la invitación">
+
         <span class="flap" aria-hidden="true"></span>
         <span class="letter" aria-hidden="true"></span>
+
       </button>
     </section>
 
-    <section class="invite" id="invite" aria-label="Invitación de Noche de Gala" hidden>
+    <section class="invite" id="invite"
+             aria-label="Invitación de Noche de Gala" hidden>
+
       <div class="invite-art-wrap">
-        <img class="artwork invite-art" src="assets/invitacion.png" alt="Invitación a la Noche de Gala, despedida de fin de año. Dress code Gala / Black Tie. 13 de diciembre, 7:00 p. m., IPUC La Libertad.">
-        <p class="guest-name" id="guestName">Invitado especial</p>
+
+        <img class="artwork invite-art"
+             src="invitación.png"
+             alt="Invitación a la Noche de Gala.">
+
+        <p class="guest-name" id="guestName">
+          Invitado especial
+        </p>
+
       </div>
-      <button class="back-button" id="backButton" type="button">Volver a ver el sobre</button>
+
+      <button class="back-button" id="backButton" type="button">
+        Volver a ver el sobre
+      </button>
+
     </section>
+
   </main>
+
   <script src="script.js"></script>
+
 </body>
 </html>
